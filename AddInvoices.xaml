@@ -1,0 +1,378 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="AddInvoices" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1234,1980" sap2010:WorkflowViewState.IdRef="AddInvoices_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence DisplayName="AddInvoices" sap:VirtualizedContainerService.HintSize="546,1915" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: ERP CRM Software" sap:VirtualizedContainerService.HintSize="484,944" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="1bcb1db8-69fa-4725-a5d4-f19b096f087b" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,727" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Invoices'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1bcb1db8-69fa-4725-a5d4-f19b096f087b" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://cloud.idurarapp.com/invoice" ContentHash="7yuCeBE1uUelYy6sSADvgQ" DesignTimeRectangle="80, 457, 52, 19" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Invoices'" FullSelectorArgument="&lt;webctrl aaname='Invoices' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Invoices' tag='A' type='' class='' check:innerText='Invoices' /&gt;" Guid="72fb2967-a2bc-46aa-8d59-d4097783f3e9" InformativeScreenshot="c590807873b750b6c768aaf5eabb2433.png" Reference="-ZGp_XHWj0C4sEpINFapvg/ew5oMwzwoU-yh9OxQ9OafQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ERP CRM Software' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Add New Invoice'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1bcb1db8-69fa-4725-a5d4-f19b096f087b" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://cloud.idurarapp.com/invoice" ContentHash="SwcRocdUG0mET9Vk674C0A" DesignTimeRectangle="1472, 360, 110, 22" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Add New Invoice'" FullSelectorArgument="&lt;webctrl aaname='Add New Invoice' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Add New Invoice' tag='SPAN' type='' class='' check:innerText='Add New Invoice' /&gt;" Guid="3f0f2f2b-036c-48a5-8624-6c0cceeb46ef" InformativeScreenshot="9a65d186e1615bf2f2ac13a0ce02cb59.png" Reference="-ZGp_XHWj0C4sEpINFapvg/aoA4qW8Z9UWrICDk_AI7SQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ERP CRM Software' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="1434, 355, 164, 32" ElementType="Button" FriendlyName="'Add New Invoice'" FullSelectorArgument="&lt;webctrl aaname='Add New Invoice' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Add New Invoice' tag='BUTTON' type='button' class='ant-btn css-1rzm55x ant-btn-primary' check:innerText='Add New Invoice' /&gt;" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT rc_select_92'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="DebuggerApi" ScopeIdentifier="1bcb1db8-69fa-4725-a5d4-f19b096f087b" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://cloud.idurarapp.com/invoice/create" ContentHash="bFiizsZlJUG8QkO0sHVmBw" DesignTimeRectangle="590, 492, 308, 30" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT rc_select_92'" FullSelectorArgument="&lt;webctrl id='rc_select_92' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='rc_select_92' tag='INPUT' type='search' class='ant-select-selection-search-input' aaname='' /&gt;" Guid="66c8c5ec-fa9d-401a-8565-b8bb064de0db" InformativeScreenshot="e901636c7373e3326cb039f55f419f76.png" Reference="-ZGp_XHWj0C4sEpINFapvg/XVbPRxad7EK9icL6DGCYPw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ERP CRM Software' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" ContentHash="qcLi4wI6OEOr3PW56yGpWQ" IconBase64="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" InformativeScreenshot="118d027759c2655626ed1a7ad2b4ada3.jpg" Reference="-ZGp_XHWj0C4sEpINFapvg/RMPCIRabWkSTqK8oyiY_Ew" Selector="&lt;html app='chrome.exe' title='ERP CRM Software' /&gt;" Title="ERP CRM Software" Url="https://cloud.idurarapp.com/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Grammarly Anchor Window" sap:VirtualizedContainerService.HintSize="484,760" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" ScopeGuid="076df239-520e-4743-96a9-958d1a6753b5" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,469" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Grammarly Anchor Window'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Right" ScopeIdentifier="076df239-520e-4743-96a9-958d1a6753b5" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable ContentHash="btSXOKOGpECy5n2h5wqgKA" DesignTimeRectangle="0, 0, 22, 22" DesignTimeScaleFactor="1" FriendlyName="'Grammarly Anchor Window'" Guid="951b6105-33e5-47e1-9cfe-a2a937940679" InformativeScreenshot="cde4bbd048bd50b8a9942c2710ff2efa.png" Reference="-ZGp_XHWj0C4sEpINFapvg/l8jnOFOMW0u6vs6PYZLRtw" ScopeSelectorArgument="&lt;wnd app='grammarly.desktop.exe' cls='HwndWrapper*' title='Grammarly Anchor Window' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.FuzzySelectorArgument>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" Value="" />
+                    </InArgument>
+                  </uix:TargetAnchorable.FuzzySelectorArgument>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Grammarly Anchor Window'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Right" ScopeIdentifier="076df239-520e-4743-96a9-958d1a6753b5" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable ContentHash="btSXOKOGpECy5n2h5wqgKA" DesignTimeRectangle="0, 0, 22, 22" DesignTimeScaleFactor="1" FriendlyName="'Grammarly Anchor Window'" Guid="951b6105-33e5-47e1-9cfe-a2a937940679" InformativeScreenshot="cde4bbd048bd50b8a9942c2710ff2efa.png" Reference="-ZGp_XHWj0C4sEpINFapvg/l8jnOFOMW0u6vs6PYZLRtw" ScopeSelectorArgument="&lt;wnd app='grammarly.desktop.exe' cls='HwndWrapper*' title='Grammarly Anchor Window' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="0" />
+                  </uix:TargetAnchorable.Anchors>
+                  <uix:TargetAnchorable.FuzzySelectorArgument>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" Value="" />
+                    </InArgument>
+                  </uix:TargetAnchorable.FuzzySelectorArgument>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" ContentHash="1ua-VOzvg0meG5ZwYE0ydg" FilePath="C:\Users\ravindra.kumar\AppData\Local\Grammarly\DesktopIntegrations\grammarly.desktop.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKCSURBVFhHtVbNLgRBEB67LyCeAE/AI3gEb7AewM4cRezi4uDAisRJ2AtHcXNjT8TFiAMHiXWQOMncOI76erqp6ame7VnjS77Npqu666ereirwRhRNBp3lVmM9PJ7ohjExaXTDFMR/rDU64TF0lG5tWImmG2vtHjfoRThDe/UpY0BFHO6Kh1chnVE9I+Q5RTwUDxyDOMs/G6vRnI/xqa2VdGZnUxH/JR1O5QSdra04MCLyhaP9tHc9SIfJR2oDa/27W6Uj7QXLM0H35DI+S1FevTxrU6MBXWRGOks5IdaEo+DmD7bT5OtTH/2LV4p4MHxWlORYWzw9LJyniMLMgdIiKdrG8X/z6kKMDlnauxlozQyts5OCnmHuKqjP+7YCDkSUBrhjV1o5zb7zpwdR/kN6WzLrG9GkpNCPb7Vpf+OGpkMkGWOS1UInatlCRMFRxXgVNvFsS+lHqxmgtWx5baTvSkBtEduC+P1Nm09L+7oGxgH9FD4yBqh6W1ZGXN3G5YWTwouZwIHcIr9/FJ8tL+P544PeKUOqpdocWKKeHwUvB0CDKleAWoETNjm8rgCsqwjxkho4sqmKsCBAwRigJSUdH/LHTGxntGFhkcjrANcwzkNkP2ZSJrOHyFo05N7f05X4DB2GMM6/I67vgnqKJQEIg/wQOOGTCdw73+fMINIPFASM0izgmnqwxrNm4JoJ6COYfY4lIaedTg5UNmg7CWDNOZD8fIoJooJFOCFF5wKmpJLrGmIE0Ob9HDCEI2hL1IMNZAmyEe8GjOeHUkHJm56DhyGMF8dyQfE/WIzcQFCulyg4fuc2xE1/Z6L63BU1h7B5HNJQ075vdtv9Js2YpRHnEATfNtoGc5JKIQcAAAAASUVORK5CYII=" InformativeScreenshot="84a9abc2cf2617b0a68c790b46e5d0ff.png" Reference="-ZGp_XHWj0C4sEpINFapvg/VxgTP7NbxUuVJD8m2SAuzw" Selector="&lt;wnd app='grammarly.desktop.exe' cls='HwndWrapper*' title='Grammarly Anchor Window' idx='*' /&gt;" Title="Grammarly Anchor Window" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: ERP CRM Software" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" ScopeGuid="9c7e9a7e-e9ec-45ca-a270-f1984f8a3ab0" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Number'" EmptyFieldMode="SingleLine" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="DebuggerApi" ScopeIdentifier="9c7e9a7e-e9ec-45ca-a270-f1984f8a3ab0" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://cloud.idurarapp.com/invoice/create" ContentHash="4Lp8uwpurESox_Ynp_VcdQ" DesignTimeRectangle="923, 492, 115, 30" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'2'" FullSelectorArgument="&lt;webctrl id='number' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='number' tag='INPUT' type='' class='ant-input-number-input' aaname='Number' /&gt;" Guid="94a5620a-b3b1-46a2-87d5-6dc7eeacb817" InformativeScreenshot="390ab326c824d25ba9f5649dfa39d0fe.png" IsResponsive="True" Reference="-ZGp_XHWj0C4sEpINFapvg/WrTX-xw980WkbiymqxqmQg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ERP CRM Software' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="922, 460, 78, 22" ElementType="Text" FriendlyName="'Number'" FullSelectorArgument="&lt;webctrl aaname='Number' class='ant-form-item-required' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Number' class='ant-form-item-required' tag='LABEL' type='' check:innerText='Number' /&gt;" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Number'" EmptyFieldMode="SingleLine" sap2010:WorkflowViewState.IdRef="NTypeInto_3" InteractionMode="DebuggerApi" ScopeIdentifier="9c7e9a7e-e9ec-45ca-a270-f1984f8a3ab0" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://cloud.idurarapp.com/invoice/create" ContentHash="4Lp8uwpurESox_Ynp_VcdQ" DesignTimeRectangle="923, 492, 115, 30" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'2'" FullSelectorArgument="&lt;webctrl id='number' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='number' tag='INPUT' type='' class='ant-input-number-input' aaname='Number' /&gt;" Guid="94a5620a-b3b1-46a2-87d5-6dc7eeacb817" InformativeScreenshot="390ab326c824d25ba9f5649dfa39d0fe.png" IsResponsive="True" Reference="-ZGp_XHWj0C4sEpINFapvg/WrTX-xw980WkbiymqxqmQg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ERP CRM Software' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="922, 460, 78, 22" ElementType="Text" FriendlyName="'Number'" FullSelectorArgument="&lt;webctrl aaname='Number' class='ant-form-item-required' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Number' class='ant-form-item-required' tag='LABEL' type='' check:innerText='Number' /&gt;" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'SPAN'" sap2010:WorkflowViewState.IdRef="NClick_5" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9c7e9a7e-e9ec-45ca-a270-f1984f8a3ab0" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://cloud.idurarapp.com/invoice/create" ContentHash="KNlro5_CoEWIGKaq8wN0fg" DesignTimeRectangle="1016, 492, 22, 15" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'SPAN'" FullSelectorArgument="&lt;webctrl aria-role='button' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='button' tag='SPAN' type='' class='ant-input-number-handler ant-input-number-handler-up' aaname='' /&gt;" Guid="1ab99f9c-4f60-40f0-a15a-a5ba31ebe2c8" InformativeScreenshot="95ece8a2a223c5eafda39a335da36605.png" Reference="-ZGp_XHWj0C4sEpINFapvg/fQyvM1m1_Ue75Y3zwxQETw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ERP CRM Software' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="923, 492, 115, 30" ElementType="InputBox" FriendlyName="'INPUT number'" FullSelectorArgument="&lt;webctrl id='number' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='number' tag='INPUT' type='' class='ant-input-number-input' aaname='Number' /&gt;" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Quantity'" EmptyFieldMode="SingleLine" sap2010:WorkflowViewState.IdRef="NTypeInto_4" InteractionMode="DebuggerApi" ScopeIdentifier="9c7e9a7e-e9ec-45ca-a270-f1984f8a3ab0" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://cloud.idurarapp.com/invoice/create" ContentHash="8ZbuUxdVIkOY_3OCYEL5Mg" DesignTimeRectangle="1095, 706, 115, 30" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT items_0_quantity'" FullSelectorArgument="&lt;webctrl aria-role='spinbutton' idx='3' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='spinbutton' type='' tag='INPUT' class='ant-input-number-input' aaname='' /&gt;" Guid="b008f363-18ff-4a4d-b1f8-9e924d3f0912" InformativeScreenshot="e51e0e58973293c4322fa98013c19fd0.png" IsResponsive="True" Reference="-ZGp_XHWj0C4sEpINFapvg/i2XzG3nwB0eBjigAjRiRUQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ERP CRM Software' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="1094, 683, 117, 22" ElementType="Text" FriendlyName="'Quantity'" FullSelectorArgument="&lt;webctrl idx='3' tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='P' class='' aaname='Quantity' check:innerText='Quantity' /&gt;" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Quantity'" EmptyFieldMode="SingleLine" sap2010:WorkflowViewState.IdRef="NTypeInto_5" InteractionMode="DebuggerApi" ScopeIdentifier="9c7e9a7e-e9ec-45ca-a270-f1984f8a3ab0" Text="5" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://cloud.idurarapp.com/invoice/create" ContentHash="8ZbuUxdVIkOY_3OCYEL5Mg" DesignTimeRectangle="1095, 706, 115, 30" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT items_0_quantity'" FullSelectorArgument="&lt;webctrl aria-role='spinbutton' idx='3' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='spinbutton' type='' tag='INPUT' class='ant-input-number-input' aaname='' /&gt;" Guid="b008f363-18ff-4a4d-b1f8-9e924d3f0912" InformativeScreenshot="e51e0e58973293c4322fa98013c19fd0.png" IsResponsive="True" Reference="-ZGp_XHWj0C4sEpINFapvg/i2XzG3nwB0eBjigAjRiRUQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ERP CRM Software' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="1094, 683, 117, 22" ElementType="Text" FriendlyName="'Quantity'" FullSelectorArgument="&lt;webctrl idx='3' tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='P' class='' aaname='Quantity' check:innerText='Quantity' /&gt;" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '$'" EmptyFieldMode="SingleLine" sap2010:WorkflowViewState.IdRef="NTypeInto_6" InteractionMode="DebuggerApi" ScopeIdentifier="9c7e9a7e-e9ec-45ca-a270-f1984f8a3ab0" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://cloud.idurarapp.com/invoice/create" ContentHash="yqXJU1GBdkaSZQ-UZkWyXw" DesignTimeRectangle="1255, 610, 127, 30" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT items_0_price'" FullSelectorArgument="&lt;webctrl aria-role='spinbutton' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;input' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='spinbutton' type='' tag='INPUT' class='ant-input-number-input' aaname='' /&gt;" Guid="4ea1d2eb-ed17-450a-ade2-24149765aea7" InformativeScreenshot="7b474b781b119f9aebc60862b8f83592.png" IsResponsive="True" Reference="-ZGp_XHWj0C4sEpINFapvg/ZX1Yimqrv0W68KnavaQHUg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ERP CRM Software' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="1223, 609, 31, 32" ElementType="Text" FriendlyName="'$'" FullSelectorArgument="&lt;webctrl class='ant-input-number-group-addon' parentid='root' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='ant-input-number-group-addon' parentid='root' tag='DIV' type='' aaname='$' check:innerText='$' /&gt;" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '$'" EmptyFieldMode="SingleLine" sap2010:WorkflowViewState.IdRef="NTypeInto_7" InteractionMode="DebuggerApi" ScopeIdentifier="9c7e9a7e-e9ec-45ca-a270-f1984f8a3ab0" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://cloud.idurarapp.com/invoice/create" ContentHash="mwMpPnqGIEmwEwLqmTFgQQ" DesignTimeRectangle="1255, 610, 127, 30" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT items_0_price'" FullSelectorArgument="&lt;webctrl aria-role='spinbutton' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;input' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='spinbutton' type='' tag='INPUT' class='ant-input-number-input' aaname='' /&gt;" Guid="c50aca85-d011-494f-81a2-1dfdb5f2f44f" InformativeScreenshot="06eb1acfb5904689f197cbceb1a812b4.png" IsResponsive="True" Reference="-ZGp_XHWj0C4sEpINFapvg/aPrRJ7XWxkagqKTi8mXBGw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ERP CRM Software' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="1223, 609, 31, 32" ElementType="Text" FriendlyName="'$'" FullSelectorArgument="&lt;webctrl class='ant-input-number-group-addon' parentid='root' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='ant-input-number-group-addon' parentid='root' tag='DIV' type='' aaname='$' check:innerText='$' /&gt;" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '$'" EmptyFieldMode="SingleLine" sap2010:WorkflowViewState.IdRef="NTypeInto_8" InteractionMode="DebuggerApi" ScopeIdentifier="9c7e9a7e-e9ec-45ca-a270-f1984f8a3ab0" Text="2" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://cloud.idurarapp.com/invoice/create" ContentHash="J8x-m0bEQkSaav4PMXgCmQ" DesignTimeRectangle="1255, 610, 127, 30" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT items_0_price'" FullSelectorArgument="&lt;webctrl aria-role='spinbutton' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;input' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='spinbutton' type='' tag='INPUT' class='ant-input-number-input' aaname='' /&gt;" Guid="a489c7bd-609c-439d-bc5e-9c500aae7fda" InformativeScreenshot="430ab1ce9c982bff990c487bac69eb2e.png" IsResponsive="True" Reference="-ZGp_XHWj0C4sEpINFapvg/PYOZMxCUyU2BRGRwuYhaYQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ERP CRM Software' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="1223, 609, 31, 32" ElementType="Text" FriendlyName="'$'" FullSelectorArgument="&lt;webctrl class='ant-input-number-group-addon' parentid='root' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='ant-input-number-group-addon' parentid='root' tag='DIV' type='' aaname='$' check:innerText='$' /&gt;" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Save'" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9c7e9a7e-e9ec-45ca-a270-f1984f8a3ab0" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://cloud.idurarapp.com/invoice/create" ContentHash="wWZUZsQ5T0CF9mo6y-Xatw" DesignTimeRectangle="674, 775, 31, 22" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Save'" FullSelectorArgument="&lt;webctrl aaname='Save' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;button&amp;gt;span' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Save' type='' tag='SPAN' class='' check:innerText='Save' /&gt;" Guid="63efa2ee-44c5-466d-92ad-0076f6b51de0" InformativeScreenshot="20c571573e5664b2b7277a73ca99875d.png" Reference="-ZGp_XHWj0C4sEpINFapvg/xf89jSjVe0-sQR9MdpwxGQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ERP CRM Software' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="578, 770, 203, 32" ElementType="Button" FriendlyName="'Save'" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='ant-btn css-1rzm55x ant-btn-primary ant-btn-block' aaname='Save' check:innerText='Save' /&gt;" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Tax 0%'" sap2010:WorkflowViewState.IdRef="NClick_7" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9c7e9a7e-e9ec-45ca-a270-f1984f8a3ab0" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://cloud.idurarapp.com/invoice/create" ContentHash="XLsZX45tkkO9KDEz_WHlkw" DesignTimeRectangle="1239, 871, 57, 22" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Tax 0%'" FullSelectorArgument="&lt;webctrl aaname='Tax 0%' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Tax 0%' tag='SPAN' type='' class='ant-tag ant-tag-borderless css-1rzm55x' check:innerText='Tax 0%' /&gt;" Guid="b161a5aa-6d54-4991-b59b-d6122373793b" InformativeScreenshot="75c8be37768da84ae17038d9d774fdc3.png" Reference="-ZGp_XHWj0C4sEpINFapvg/9HvonT2fqkKAOoG2tyRwGA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ERP CRM Software' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Save'" sap2010:WorkflowViewState.IdRef="NClick_8" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9c7e9a7e-e9ec-45ca-a270-f1984f8a3ab0" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://cloud.idurarapp.com/invoice/create" ContentHash="wWZUZsQ5T0CF9mo6y-Xatw" DesignTimeRectangle="674, 775, 31, 22" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Save'" FullSelectorArgument="&lt;webctrl aaname='Save' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;button&amp;gt;span' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Save' type='' tag='SPAN' class='' check:innerText='Save' /&gt;" Guid="63efa2ee-44c5-466d-92ad-0076f6b51de0" InformativeScreenshot="20c571573e5664b2b7277a73ca99875d.png" Reference="-ZGp_XHWj0C4sEpINFapvg/xf89jSjVe0-sQR9MdpwxGQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ERP CRM Software' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="578, 770, 203, 32" ElementType="Button" FriendlyName="'Save'" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='ant-btn css-1rzm55x ant-btn-primary ant-btn-block' aaname='Save' check:innerText='Save' /&gt;" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Item'" EmptyFieldMode="SingleLine" sap2010:WorkflowViewState.IdRef="NTypeInto_9" InteractionMode="DebuggerApi" ScopeIdentifier="9c7e9a7e-e9ec-45ca-a270-f1984f8a3ab0" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://cloud.idurarapp.com/invoice/create" ContentHash="aYmvvCgTo02ncYBRUFRRfA" DesignTimeRectangle="578, 609, 203, 32" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT items_0_itemName'" FullSelectorArgument="&lt;webctrl idx='2' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl class='ant-input css-1rzm55x ant-input-outlined ant-input-status-error' tag='INPUT' type='text' aaname='' /&gt;" Guid="f25ac941-498b-4fac-a2a3-d26530954e0d" InformativeScreenshot="d9efa36efe1f88b6a454167ab30257a9.png" IsResponsive="True" Reference="-ZGp_XHWj0C4sEpINFapvg/RyEj_UK7q0uxeyIGkYFrDg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ERP CRM Software' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="578, 587, 203, 22" ElementType="Text" FriendlyName="'Item'" FullSelectorArgument="&lt;webctrl tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='P' type='' class='' aaname='Item' check:innerText='Item' /&gt;" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Item'" EmptyFieldMode="SingleLine" sap2010:WorkflowViewState.IdRef="NTypeInto_10" InteractionMode="DebuggerApi" ScopeIdentifier="9c7e9a7e-e9ec-45ca-a270-f1984f8a3ab0" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://cloud.idurarapp.com/invoice/create" ContentHash="aYmvvCgTo02ncYBRUFRRfA" DesignTimeRectangle="578, 609, 203, 32" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT items_0_itemName'" FullSelectorArgument="&lt;webctrl idx='2' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl class='ant-input css-1rzm55x ant-input-outlined ant-input-status-error' tag='INPUT' type='text' aaname='' /&gt;" Guid="f25ac941-498b-4fac-a2a3-d26530954e0d" InformativeScreenshot="d9efa36efe1f88b6a454167ab30257a9.png" IsResponsive="True" Reference="-ZGp_XHWj0C4sEpINFapvg/RyEj_UK7q0uxeyIGkYFrDg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ERP CRM Software' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="578, 587, 203, 22" ElementType="Text" FriendlyName="'Item'" FullSelectorArgument="&lt;webctrl tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='P' type='' class='' aaname='Item' check:innerText='Item' /&gt;" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Item'" EmptyFieldMode="SingleLine" sap2010:WorkflowViewState.IdRef="NTypeInto_11" InteractionMode="DebuggerApi" ScopeIdentifier="9c7e9a7e-e9ec-45ca-a270-f1984f8a3ab0" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://cloud.idurarapp.com/invoice/create" ContentHash="aYmvvCgTo02ncYBRUFRRfA" DesignTimeRectangle="578, 609, 203, 32" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT items_0_itemName'" FullSelectorArgument="&lt;webctrl idx='2' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl class='ant-input css-1rzm55x ant-input-outlined ant-input-status-error' tag='INPUT' type='text' aaname='' /&gt;" Guid="f25ac941-498b-4fac-a2a3-d26530954e0d" InformativeScreenshot="d9efa36efe1f88b6a454167ab30257a9.png" IsResponsive="True" Reference="-ZGp_XHWj0C4sEpINFapvg/RyEj_UK7q0uxeyIGkYFrDg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ERP CRM Software' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="578, 587, 203, 22" ElementType="Text" FriendlyName="'Item'" FullSelectorArgument="&lt;webctrl tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='P' type='' class='' aaname='Item' check:innerText='Item' /&gt;" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Item'" sap2010:WorkflowViewState.IdRef="NClick_9" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9c7e9a7e-e9ec-45ca-a270-f1984f8a3ab0" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://cloud.idurarapp.com/invoice/create" ContentHash="aYmvvCgTo02ncYBRUFRRfA" DesignTimeRectangle="578, 609, 203, 32" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT items_0_itemName'" FullSelectorArgument="&lt;webctrl idx='2' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl class='ant-input css-1rzm55x ant-input-outlined ant-input-status-error' tag='INPUT' type='text' aaname='' /&gt;" Guid="f25ac941-498b-4fac-a2a3-d26530954e0d" InformativeScreenshot="d9efa36efe1f88b6a454167ab30257a9.png" IsResponsive="True" Reference="-ZGp_XHWj0C4sEpINFapvg/RyEj_UK7q0uxeyIGkYFrDg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ERP CRM Software' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="578, 587, 203, 22" ElementType="Text" FriendlyName="'Item'" FullSelectorArgument="&lt;webctrl tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='P' type='' class='' aaname='Item' check:innerText='Item' /&gt;" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'test item'" sap2010:WorkflowViewState.IdRef="NClick_10" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9c7e9a7e-e9ec-45ca-a270-f1984f8a3ab0" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable ContentHash="vDRu4MDLJkWCCevs4zxvTg" DesignTimeRectangle="8, 12, 148, 36" DesignTimeScaleFactor="1" ElementType="ListItem" FriendlyName="'test item'" FullSelectorArgument="&lt;ctrl name='Autofill' role='list' /&gt;&lt;ctrl name='test item' role='list item' /&gt;&lt;ctrl name='test item' role='list item' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Autofill' role='list' /&gt;&lt;ctrl name='test item' role='list item' /&gt;&lt;ctrl name='test item' role='list item' automationid='' check:text='test item' /&gt;" Guid="12d44b19-ed7e-4eb1-b4f3-93e1e4d5ce37" InformativeScreenshot="75c17d83f4cff10386b545cf7a5ade47.png" Reference="-ZGp_XHWj0C4sEpINFapvg/I5aUVNdTMkmjvWEqYuMnRQ" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Save'" sap2010:WorkflowViewState.IdRef="NClick_11" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9c7e9a7e-e9ec-45ca-a270-f1984f8a3ab0" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://cloud.idurarapp.com/invoice/create" ContentHash="Eg7Fb3KDWEicZqktObWKWA" DesignTimeRectangle="578, 770, 203, 32" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Save'" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='ant-btn css-1rzm55x ant-btn-primary ant-btn-block' aaname='Save' check:innerText='Save' /&gt;" Guid="54f7fe4b-6da3-4019-997d-5b89c7d93fb8" InformativeScreenshot="6a19a07cf57dd70404097971b99f3273.png" Reference="-ZGp_XHWj0C4sEpINFapvg/ZYCGoi0GikOr3d17_xxpDQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ERP CRM Software' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="674, 775, 31, 22" ElementType="Text" FriendlyName="'Save'" FullSelectorArgument="&lt;webctrl aaname='Save' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;button&amp;gt;span' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Save' type='' tag='SPAN' class='' check:innerText='Save' /&gt;" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" ContentHash="qcLi4wI6OEOr3PW56yGpWQ" IconBase64="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" InformativeScreenshot="118d027759c2655626ed1a7ad2b4ada3.jpg" Reference="-ZGp_XHWj0C4sEpINFapvg/RMPCIRabWkSTqK8oyiY_Ew" Selector="&lt;html app='chrome.exe' title='ERP CRM Software' /&gt;" Title="ERP CRM Software" Url="https://cloud.idurarapp.com/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
